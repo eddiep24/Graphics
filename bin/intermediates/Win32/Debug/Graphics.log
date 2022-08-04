@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\dev\Graphics\Graphics\src\main.cpp(52,31): error C2664: 'void (GLuint)': cannot convert argument 1 from 'const char *' to 'GLuint'
+C:\dev\Graphics\Graphics\src\main.cpp(52,18): message : There is no context in which this conversion is possible
