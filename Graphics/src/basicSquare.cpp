@@ -9,8 +9,10 @@
 #include <glm\gtc\matrix_transform.hpp>
 #include "Utils.h"
 using namespace std;
+
 #define numVAOs 1
 #define numVBOs 2
+
 float cameraX, cameraY, cameraZ;
 float cubeLocX, cubeLocY, cubeLocZ;
 GLuint renderingProgram;
@@ -20,7 +22,7 @@ GLuint vbo[numVBOs];
 GLuint mvLoc, projLoc;
 int width, height;
 float aspect;
-glm::mat4 pMat, vMat, mMat, mvMat;
+glm::mat4 perspectiveMatrix, vMat, mMat, modelViewMatrix;
 
 
 void setupVertices (void)
@@ -62,35 +64,42 @@ void init (GLFWwindow* window)
 
 void display (GLFWwindow* window, double currentTime)
 	{
-	glClear (GL_DEPTH_BUFFER_BIT);
+	glClear (GL_DEPTH_BUFFER_BIT); // Fills depth buffer with default value (usually 1.0)
 	glUseProgram (renderingProgram); // Enables the use of shaders
-	// get the uniform variables for the MV and projection matrices
-	mvLoc = glGetUniformLocation (renderingProgram, "mv_matrix");
-	projLoc = glGetUniformLocation (renderingProgram, "proj_matrix");
-	// build perspective matrix
+	
+	mvLoc = glGetUniformLocation (renderingProgram, "mv_matrix"); // get the uniform variable locations
+	projLoc = glGetUniformLocation (renderingProgram, "proj_matrix"); 
+
+	// Build perspective matrix
 	glfwGetFramebufferSize (window, &width, &height);
 	aspect = (float)width / (float)height;
-	pMat = glm::perspective (1.0472f, aspect, 0.1f, 1000.0f); // 1.0472 radians = 60 degrees
-	// build view matrix, model matrix, and model-view matrix
+	perspectiveMatrix = glm::perspective (1.0472f, aspect, 0.1f, 1000.0f); // 1.0472 radians = 60 degrees
+
+	// Build view matrix, model matrix, and model-view matrix
+	// glm::mat4 (1.0f) is the identity matrix (made from constructor)
 	vMat = glm::translate (glm::mat4 (1.0f), glm::vec3 (-cameraX, -cameraY, -cameraZ));
 	mMat = glm::translate (glm::mat4 (1.0f), glm::vec3 (cubeLocX, cubeLocY, cubeLocZ));
-	mvMat = vMat * mMat;
-	// copy perspective and MV matrices to corresponding uniform variables
-	glUniformMatrix4fv (mvLoc, 1, GL_FALSE, glm::value_ptr (mvMat));
-	glUniformMatrix4fv (projLoc, 1, GL_FALSE, glm::value_ptr (pMat));
-	// associate VBO with the corresponding vertex attribute in the vertex shader
+	modelViewMatrix = vMat * mMat;
+
+	// Copy perspective and MV matrices to corresponding uniform variables
+	glUniformMatrix4fv (mvLoc, 1, GL_FALSE, glm::value_ptr (modelViewMatrix));
+	glUniformMatrix4fv (projLoc, 1, GL_FALSE, glm::value_ptr (perspectiveMatrix));
+
+	// Associate VBO with the corresponding vertex attribute in the vertex shader
 	glBindBuffer (GL_ARRAY_BUFFER, vbo[0]);
 	glVertexAttribPointer (0, 3, GL_FLOAT, GL_FALSE, 0, 0);
 	glEnableVertexAttribArray (0);
-	// adjust OpenGL settings and draw model
+
+	// Adjust OpenGL settings and draw model
 	glEnable (GL_DEPTH_TEST);
 	glDepthFunc (GL_LEQUAL);
 	glDrawArrays (GL_TRIANGLES, 0, 36);
 	}
 
 
+
 int main (void)
-	{ // main() is unchanged from before
+	{
 	if (!glfwInit ()) { exit (EXIT_FAILURE); }
 	glfwWindowHint (GLFW_CONTEXT_VERSION_MAJOR, 4);
 	glfwWindowHint (GLFW_CONTEXT_VERSION_MINOR, 3);

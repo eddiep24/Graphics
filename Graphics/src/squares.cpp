@@ -25,7 +25,7 @@ GLuint vLoc, tfLoc, projLoc;
 int width, height, displayLoopi;
 float aspect;
 float timeFactor;
-glm::mat4 pMat, vMat, tMat, rMat, mMat, mvMat;
+glm::mat4 pMat, vMat, tMat, rMat, mMat, modelViewMatrix;
 
 void setupVertices (void)
     {
@@ -99,7 +99,7 @@ void display (GLFWwindow* window, double currentTime)
     glEnable (GL_DEPTH_TEST);
     glDepthFunc (GL_LEQUAL);
 
-    glDrawArraysInstanced (GL_TRIANGLES, 0, 36, 24);
+    glDrawArraysInstanced (GL_TRIANGLES, 0, 36, 500);
     }
 
 

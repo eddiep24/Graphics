@@ -1,3 +1,2 @@
-﻿  redWindow.cpp
-C:\dev\Graphics\Graphics\src\redWindow.cpp(12,34): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+﻿  squares.cpp
   Graphics.vcxproj -> C:\dev\Graphics\bin\Win32\Debug\Graphics.exe
