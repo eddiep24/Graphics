@@ -15,13 +15,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp">
+    <ClCompile Include="res\externals\Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="src\vertShader.glsl" />
-    <None Include="src\fragShader.glsl" />
+    <None Include="res\shaders\squares\basic.vert" />
+    <None Include="res\shaders\squares\basic.frag" />
+    <None Include="res\shaders\squares\basic.tesc" />
+    <None Include="res\shaders\squares\basic.tese" />
+    <None Include="res\shaders\squares\basic.comp" />
+    <None Include="res\shaders\squares\basic.geom" />
+    <None Include="res\shaders\basicSquare\basic.vert" />
+    <None Include="res\shaders\basicSquare\basic.comp" />
+    <None Include="res\shaders\basicSquare\basic.frag" />
+    <None Include="res\shaders\basicSquare\basic.geom" />
+    <None Include="res\shaders\basicSquare\basic.tesc" />
+    <None Include="res\shaders\basicSquare\basic.tese" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="res\externals\Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\dev\Graphics\bin\Win32\Debug\Graphics.exe</FullPath>
+      <FullPath>C:\dev\Graphics\Graphics\bin\Win32\Debug\Graphics.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
