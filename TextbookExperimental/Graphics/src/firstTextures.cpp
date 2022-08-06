@@ -10,7 +10,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <stack>
 #include "Utils.h"
-#include <SOIL2>
+#include <SOIL2/SOIL2.h>
 
 using namespace std;
 #define numVAOs 1

@@ -1,2 +1,4 @@
-﻿  shapes.cpp
-  Graphics.vcxproj -> C:\dev\Graphics\TextbookExperimental\bin\Win32\Debug\Graphics.exe
+﻿  Utils.cpp
+  firstTextures.cpp
+C:\dev\Graphics\TextbookExperimental\Graphics\src\firstTextures.cpp(13,10): fatal error C1083: Cannot open include file: 'SOIL2': No such file or directory
+  Generating Code...

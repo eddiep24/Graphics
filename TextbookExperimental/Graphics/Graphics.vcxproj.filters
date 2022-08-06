@@ -18,15 +18,11 @@
     <ClCompile Include="res\externals\Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\shapes.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\firstTextures.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="res\shaders\squares\basic.vert" />
     <None Include="res\shaders\squares\basic.frag" />
     <None Include="res\shaders\squares\basic.tesc" />
