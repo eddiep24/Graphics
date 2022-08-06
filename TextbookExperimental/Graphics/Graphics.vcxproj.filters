@@ -18,7 +18,10 @@
     <ClCompile Include="res\externals\Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\squares.cpp">
+    <ClCompile Include="src\shapes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\firstTextures.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -36,6 +39,14 @@
     <None Include="res\shaders\basicSquare\basic.geom" />
     <None Include="res\shaders\basicSquare\basic.tesc" />
     <None Include="res\shaders\basicSquare\basic.tese" />
+    <None Include="res\shaders\transformations\basic.comp" />
+    <None Include="res\shaders\transformations\basic.frag" />
+    <None Include="res\shaders\transformations\basic.geom" />
+    <None Include="res\shaders\transformations\basic.tesc" />
+    <None Include="res\shaders\transformations\basic.tese" />
+    <None Include="res\shaders\transformations\basic.vert" />
+    <None Include="res\shaders\shapes\basic.vert" />
+    <None Include="res\shaders\shapes\basic.frag" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="res\externals\Utils.h">

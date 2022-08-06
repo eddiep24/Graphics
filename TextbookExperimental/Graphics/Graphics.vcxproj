@@ -167,7 +167,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="res\externals\Utils.cpp" />
-    <ClCompile Include="src\squares.cpp" />
+    <ClCompile Include="src\firstTextures.cpp" />
+    <ClCompile Include="src\shapes.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -177,12 +178,20 @@
     <None Include="res\shaders\basicSquare\basic.tesc" />
     <None Include="res\shaders\basicSquare\basic.tese" />
     <None Include="res\shaders\basicSquare\basic.vert" />
+    <None Include="res\shaders\shapes\basic.frag" />
+    <None Include="res\shaders\shapes\basic.vert" />
     <None Include="res\shaders\squares\basic.comp" />
     <None Include="res\shaders\squares\basic.frag" />
     <None Include="res\shaders\squares\basic.geom" />
     <None Include="res\shaders\squares\basic.tesc" />
     <None Include="res\shaders\squares\basic.tese" />
     <None Include="res\shaders\squares\basic.vert" />
+    <None Include="res\shaders\transformations\basic.comp" />
+    <None Include="res\shaders\transformations\basic.frag" />
+    <None Include="res\shaders\transformations\basic.geom" />
+    <None Include="res\shaders\transformations\basic.tesc" />
+    <None Include="res\shaders\transformations\basic.tese" />
+    <None Include="res\shaders\transformations\basic.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="res\externals\Utils.h" />
