@@ -32,6 +32,8 @@ glm::mat4 pMat, vMat, mMat, mvMat;
 
 stack<glm::mat4> mvStack;
 
+GLuint brickTexture;
+
 void setupVertices(void)
 {
 
@@ -59,6 +61,13 @@ void setupVertices(void)
         -1.0f, -1.0f, -1.0f, 1.0f, -1.0f, 1.0f, -1.0f, -1.0f, 1.0f, // base – left front
         1.0f, -1.0f, 1.0f, -1.0f, -1.0f, -1.0f, 1.0f, -1.0f, -1.0f // base – right back
     };
+
+    float pyrTexCoords[36] = {
+        0.0f, 0.0f, 1.0f, 0.0f, 0.5f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.5f, 1.0f,
+        0.0f, 0.0f, 1.0f, 0.0f, 0.5f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.5f, 1.0f,
+        0.0f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f
+    };
+
     glGenVertexArrays(numVAOs, vao); // we need at least 1 VAO
     glBindVertexArray(vao[0]);
     glGenBuffers(numVBOs, vbo); // we need at least 2 VBOs

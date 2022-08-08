@@ -15,37 +15,45 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="res\externals\Utils.cpp">
+    <ClCompile Include="res\etc\ImportedModel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\firstTextures.cpp">
+    <ClCompile Include="res\models\torusMain\Torus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="res\etc\Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\redWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\squares\basic.vert" />
     <None Include="res\shaders\squares\basic.frag" />
-    <None Include="res\shaders\squares\basic.tesc" />
-    <None Include="res\shaders\squares\basic.tese" />
-    <None Include="res\shaders\squares\basic.comp" />
-    <None Include="res\shaders\squares\basic.geom" />
     <None Include="res\shaders\basicSquare\basic.vert" />
-    <None Include="res\shaders\basicSquare\basic.comp" />
     <None Include="res\shaders\basicSquare\basic.frag" />
-    <None Include="res\shaders\basicSquare\basic.geom" />
-    <None Include="res\shaders\basicSquare\basic.tesc" />
-    <None Include="res\shaders\basicSquare\basic.tese" />
-    <None Include="res\shaders\transformations\basic.comp" />
     <None Include="res\shaders\transformations\basic.frag" />
-    <None Include="res\shaders\transformations\basic.geom" />
-    <None Include="res\shaders\transformations\basic.tesc" />
-    <None Include="res\shaders\transformations\basic.tese" />
     <None Include="res\shaders\transformations\basic.vert" />
     <None Include="res\shaders\shapes\basic.vert" />
     <None Include="res\shaders\shapes\basic.frag" />
+    <None Include="res\shaders\spaceShuttle\basic.vert" />
+    <None Include="res\shaders\spaceShuttle\basic.comp" />
+    <None Include="res\shaders\spaceShuttle\basic.frag" />
+    <None Include="res\shaders\spaceShuttle\basic.geom" />
+    <None Include="res\shaders\spaceShuttle\basic.tesc" />
+    <None Include="res\shaders\spaceShuttle\basic.tese" />
+    <None Include="res\shaders\torusMain\basic.vert" />
+    <None Include="res\shaders\torusMain\basic.frag" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="res\externals\Utils.h">
+    <ClInclude Include="res\etc\ImportedModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="res\models\torusMain\Torus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="res\etc\Utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
